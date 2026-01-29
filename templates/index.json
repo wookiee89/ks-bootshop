@@ -213,6 +213,7 @@
           "type": "collection",
           "settings": {
             "collection": "riftbound-singles",
+            "img": "shopify://shop_images/Riftbound-Spiritforged-Champion-List-Confirmed-and-Leaked.jpg",
             "title": "Riftbound Singles"
           }
         },
