@@ -16,12 +16,21 @@
       "blocks": {
         "slide_j46kwk": {
           "type": "slide",
+          "disabled": true,
+          "settings": {
+            "announcement": "Announce something important here"
+          }
+        },
+        "slide_xNjYjF": {
+          "type": "slide",
+          "disabled": true,
           "settings": {
             "announcement": "Announce something important here"
           }
         },
         "slide_mwF4Tk": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "announcement": "Free Shipping For All Orders Over $100"
           }
@@ -29,6 +38,7 @@
       },
       "block_order": [
         "slide_j46kwk",
+        "slide_xNjYjF",
         "slide_mwF4Tk"
       ],
       "settings": {
