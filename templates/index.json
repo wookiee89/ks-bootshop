@@ -219,8 +219,9 @@
         "collection_b7ELCB": {
           "type": "collection",
           "settings": {
-            "collection": "supplies",
-            "title": ""
+            "collection": "rip-ship",
+            "img": "shopify://shop_images/images.png",
+            "title": "Rip & Ship (Coming Soon)"
           }
         }
       },
