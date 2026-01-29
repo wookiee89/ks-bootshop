@@ -15,20 +15,23 @@
         "slide_Q4UPQq": {
           "type": "slide",
           "settings": {
+            "img_mobile": "shopify://shop_images/Magic-The-Gathering-logo.jpg",
+            "img_desktop": "shopify://shop_images/Magic-The-Gathering-logo.jpg",
             "overlay_color": "#000000",
             "overlay_opacity": 10,
             "overlay_blur": 2,
-            "subtitle": "Developed by KondaSoft",
-            "title": "Welcome to KS BootShop Theme",
-            "description": "<p>Free Shopify Theme inspired by simplicity and elegance.</p>",
-            "btn_primary_text": "Get theme",
-            "btn_primary_url": "https://www.kondasoft.com/collections/shopify-themes/products/ks-bootshop",
-            "btn_secondary_text": "Learn more",
+            "subtitle": "",
+            "title": "Magic the Gathering Singles",
+            "description": "<p>Shop singles below market price</p>",
+            "btn_primary_text": "Collections",
+            "btn_primary_url": "shopify://collections",
+            "btn_secondary_text": "",
             "btn_secondary_url": "https://www.kondasoft.com/collections/shopify-themes/products/ks-bootshop"
           }
         },
         "slide_TddqxQ": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "overlay_color": "#000000",
             "overlay_opacity": 10,
@@ -44,6 +47,7 @@
         },
         "slide_ricTjb": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "overlay_color": "#000000",
             "overlay_opacity": 30,
@@ -113,7 +117,7 @@
         "recommended_mode_intent": "related",
         "header_title": "Featured Products",
         "header_title_font_size": "h3",
-        "header_description": "<p>Add on optional description for this section</p>",
+        "header_description": "",
         "header_description_font_size": "fs-md",
         "slider_speed": 300,
         "slider_navigation": true,
