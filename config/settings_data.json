@@ -1,14 +1,23 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "color_primary": "#0d6efd",
-    "color_secondary": "#455a64",
+    "color_primary": "#02415a",
+    "color_secondary": "#02415a",
     "color_body_bg": "#ffffff",
-    "color_body_color": "#212529",
+    "color_body_color": "#02415a",
     "container_max_width": 1350,
     "border_radius": 0.3,
-    "logo": "shopify:\/\/shop_images\/logo.png",
-    "favicon": "shopify:\/\/shop_images\/favicon.png",
-    "font_body": "sans-serif",
+    "logo": "shopify://shop_images/W_2.png",
+    "favicon": "shopify://shop_images/favicon.png",
+    "font_body": "system_ui_n4",
     "font_headings": "ubuntu_n4",
     "btn_text_transform": "none",
     "btn_font_family": "var(--bs-body-font-family)",
@@ -36,6 +45,7 @@
     "product_card_atc_style": "quick-view",
     "product_card_color_swatches": "Color, color",
     "cart_icon": "cart",
+    "cart_note_show": true,
     "cart_goal_value": "USD:100, \nEUR:50",
     "cart_goal_bg_color_before": "bg-primary",
     "cart_goal_bg_color_after": "bg-primary",
@@ -44,12 +54,12 @@
     "cart_upsells_limit": 5,
     "cart_gift_upsell_product": "gift-wrap",
     "recently_viewed": true,
-    "social_facebook": "#",
-    "social_instagram": "#",
-    "social_x": "#",
-    "social_tiktok": "#",
-    "social_youtube": "#",
-    "checkout_logo_image": "shopify:\/\/shop_images\/logo.png",
+    "social_facebook": "",
+    "social_instagram": "https://www.instagram.com/woobul_collectibles/",
+    "social_x": "",
+    "social_tiktok": "https://www.tiktok.com/@woobul_collectibles",
+    "social_youtube": "https://www.youtube.com/channel/UC2P1og-s7XPx-eiGFK22VcQ",
+    "checkout_logo_image": "shopify://shop_images/logo.png",
     "checkout_logo_size": "small",
     "checkout_accent_color": "#dc3545",
     "checkout_button_color": "#dc3545",
@@ -87,13 +97,6 @@
     "product_card_wishlist_color": "text-primary",
     "product_card_img_carousel_dark": false,
     "cart_img_border": "img-thumbnail",
-    "content_for_index": [],
-    "blocks": {
-      "14060646107696862457": {
-        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {}
-      }
-    }
+    "content_for_index": []
   }
 }
