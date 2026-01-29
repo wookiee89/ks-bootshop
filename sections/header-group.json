@@ -73,7 +73,7 @@
             "container_max_width": "",
             "logo": "shopify://shop_images/W_2.png",
             "logo_height": 32,
-            "main_menu": "",
+            "main_menu": "navbar-menu",
             "pt": 5,
             "pb": 5
           }
