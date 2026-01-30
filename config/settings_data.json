@@ -10,9 +10,9 @@
 {
   "current": {
     "color_primary": "#02415a",
-    "color_secondary": "#02415a",
-    "color_body_bg": "#ffffff",
-    "color_body_color": "#02415a",
+    "color_secondary": "#c9a227",
+    "color_body_bg": "#f4f1ea",
+    "color_body_color": "#1e1e1e",
     "container_max_width": 1350,
     "border_radius": 0.3,
     "logo": "shopify://shop_images/W_2.png",
