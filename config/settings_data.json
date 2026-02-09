@@ -97,6 +97,13 @@
     "product_card_wishlist_color": "text-primary",
     "product_card_img_carousel_dark": false,
     "cart_img_border": "img-thumbnail",
-    "content_for_index": []
+    "content_for_index": [],
+    "blocks": {
+      "585288358657334602": {
+        "type": "shopify://apps/cartly-cart-drawer/blocks/app-embed/156e4744-d777-4afa-8826-5d2f440b3936",
+        "disabled": false,
+        "settings": {}
+      }
+    }
   }
 }
