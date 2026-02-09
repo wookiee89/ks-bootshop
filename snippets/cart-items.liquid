@@ -118,8 +118,13 @@
 {% liquid
     assign has_ripnship = false
     for line_item in cart.items
-      if line_item.product.tags contains 'ripnship'
-        assign has_ripnship = true
+      for collection in line_item.product.collections
+        if collection.title == 'Rip & Ship'
+          assign has_ripnship = true
+          break
+        endif
+      endfor
+      if has_ripnship
         break
       endif
     endfor
