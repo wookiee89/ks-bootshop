@@ -115,9 +115,24 @@
       </li>
     {% endfor %}
   </ul>
-    <div class="cart-attribute mb-6">
+{% liquid
+    assign has_ripnship = false
+    for line_item in cart.items
+      if line_item.product.tags contains 'ripnship'
+        assign has_ripnship = true
+        break
+      endif
+    endfor
+  %}
+
+  <div class="cart-attribute mb-6">
     <label for="twitch-username" class="form-label fw-bold mb-2">
-      Twitch Username <span class="fw-normal opacity-70">(for stream credit)</span>
+      Twitch Username
+      {% if has_ripnship %}
+        <span class="text-danger">*</span>
+      {% else %}
+        <span class="fw-normal opacity-70">(for stream credit)</span>
+      {% endif %}
     </label>
     <input 
       type="text" 
@@ -126,6 +141,39 @@
       placeholder="Enter your Twitch username"
       value="{{ cart.attributes['Twitch Username'] }}"
       class="form-control"
+      {% if has_ripnship %}required{% endif %}
     >
+    {% if has_ripnship %}
+      <div class="invalid-feedback">
+        Please enter your Twitch username for rip n ship orders.
+      </div>
+      <small class="form-text opacity-70">
+        Required for rip n ship orders
+      </small>
+    {% endif %}
   </div>
+
+  {% if has_ripnship %}
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('twitch-username').closest('form');
+        if (!form) return;
+
+        form.addEventListener('submit', function(e) {
+          const input = document.getElementById('twitch-username');
+          if (!input.value.trim()) {
+            e.preventDefault();
+            input.classList.add('is-invalid');
+            input.focus();
+          }
+        });
+
+        document.getElementById('twitch-username').addEventListener('input', function() {
+          if (this.value.trim()) {
+            this.classList.remove('is-invalid');
+          }
+        });
+      });
+    </script>
+  {% endif %}
 {% endif %}
