@@ -115,4 +115,17 @@
       </li>
     {% endfor %}
   </ul>
+    <div class="cart-attribute mb-6">
+    <label for="twitch-username" class="form-label fw-bold mb-2">
+      Twitch Username <span class="fw-normal opacity-70">(for stream credit)</span>
+    </label>
+    <input 
+      type="text" 
+      id="twitch-username" 
+      name="attributes[Twitch Username]" 
+      placeholder="Enter your Twitch username"
+      value="{{ cart.attributes['Twitch Username'] }}"
+      class="form-control"
+    >
+  </div>
 {% endif %}
