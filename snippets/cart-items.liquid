@@ -158,26 +158,55 @@
     {% endif %}
   </div>
 
-  {% if has_ripnship %}
+{% if has_ripnship %}
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('twitch-username').closest('form');
-        if (!form) return;
+        const input = document.getElementById('twitch-username');
+        const form = input.closest('form');
+        
+        // Find all checkout/submit buttons in the cart
+        const checkoutBtns = form ? form.querySelectorAll('[type="submit"], [name="checkout"], .btn-checkout, [href="/checkout"]') : [];
+        
+        function toggleCheckout() {
+          const hasValue = input.value.trim().length > 0;
+          checkoutBtns.forEach(function(btn) {
+            btn.disabled = !hasValue;
+            btn.style.pointerEvents = hasValue ? 'auto' : 'none';
+            btn.style.opacity = hasValue ? '1' : '0.5';
+          });
+          if (hasValue) {
+            input.classList.remove('is-invalid');
+          }
+        }
 
-        form.addEventListener('submit', function(e) {
-          const input = document.getElementById('twitch-username');
-          if (!input.value.trim()) {
+        // Run on load
+        toggleCheckout();
+
+        // Run on input
+        input.addEventListener('input', toggleCheckout);
+
+        // Also intercept any click on disabled checkout
+        document.addEventListener('click', function(e) {
+          const link = e.target.closest('[href="/checkout"], [name="checkout"], .btn-checkout');
+          if (link && !input.value.trim()) {
             e.preventDefault();
+            e.stopPropagation();
             input.classList.add('is-invalid');
             input.focus();
           }
-        });
+        }, true);
 
-        document.getElementById('twitch-username').addEventListener('input', function() {
-          if (this.value.trim()) {
-            this.classList.remove('is-invalid');
-          }
-        });
+        // Intercept form submission as backup
+        if (form) {
+          form.addEventListener('submit', function(e) {
+            if (!input.value.trim()) {
+              e.preventDefault();
+              e.stopPropagation();
+              input.classList.add('is-invalid');
+              input.focus();
+            }
+          }, true);
+        }
       });
     </script>
   {% endif %}
